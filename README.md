@@ -1,6 +1,18 @@
-# Kubernetes
+# Ticketing.Kubernetes
 
 ## Setup
+
+* Setup 'cert-manager'
+
+> TODO: Include Helm setup
+
+```bash
+$ kubectl apply -f cert-manager
+```
+
+* Setup 'ticketing.api'
+
+> TODO: Add AKS domain script from 'providers/aks/'
 
 ```bash
 $ kubectl apply -f configmap.yml
@@ -17,6 +29,8 @@ service/ticketingapi created
 
 ### Minikube
 
+> TODO: Create local minikube documentation
+
 ```bash
 $ minikube service ticketingapi
 Opening kubernetes service default/ticketingapi in default browser...
@@ -24,13 +38,8 @@ Opening kubernetes service default/ticketingapi in default browser...
 
 ## Delete
 
+> TODO: Add 'helm list' deletion method.
+
 ```bash
-$ kubectl delete -f configmap.yml
-configmap/ticketingapi-configmap deleted
-$ kubectl delete -f secret.yml
-secret/ticketingapi-secret deleted
-$ kubectl delete -f deployment.yml
-deployment.apps/ticketingapi deleted
-$ kubectl apply -f svc.yml
-service/ticketingapi deleted
+$ kubectl delete -f ticketing.api
 ```
