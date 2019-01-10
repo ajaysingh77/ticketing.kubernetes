@@ -1,0 +1,1 @@
+az aks scale --resource-group <resource-group-name> --name <cluster-name> --node-count 2
