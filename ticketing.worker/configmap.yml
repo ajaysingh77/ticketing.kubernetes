@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ticketingworker-configmap
+  namespace: default
+data:
+  MessagingQueue: "ticketing.worker"
+  MessagingUsername: "user"
+  MessagingPassword: "hdTPkyClUB"
+  Messaging: "quiet-narwhal-rabbitmq.default.svc.cluster.local"
+---

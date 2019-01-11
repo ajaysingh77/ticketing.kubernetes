@@ -7,4 +7,9 @@ metadata:
 data:
   ValueFromKubernetesEnvVariable: "This is the value from Kubernetes enviroment variables"
   ValueOverride: "This value is from the Kubernetes ConfigMap"
+  MessagingQueue: "ticketing.worker"
+  MessagingUsername: "user"
+  MessagingPassword: "hdTPkyClUB"
+  Messaging: "quiet-narwhal-rabbitmq.default.svc.cluster.local"
+  TicketingDb: "mongodb://root:5Htpi2iwLT@prodding-blackbird-mongodb.default.svc.cluster.local"
 ---

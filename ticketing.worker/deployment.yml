@@ -1,0 +1,43 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ticketingworker
+  namespace: default
+  labels:
+    app: ticketingworker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: ticketingworker
+  template:
+    metadata:
+      name: ticketingworker
+      labels:
+        app: ticketingworker
+    spec:
+      containers:
+      - name: ticketingworker
+        image: denhamparry/ticketing.worker:latest
+        env:
+        - name: "ASPNETCORE_ENVIRONMENT"
+          value: "kubernetes"
+        volumeMounts:
+        - name: secrets
+          mountPath: /app/appsettings.kubernetes.json
+          subPath: appsettings.kubernetes.json
+        resources: {}
+        terminationMessagePath: "/dev/termination-log"
+        terminationMessagePolicy: File
+        imagePullPolicy: Always
+        securityContext:
+          privileged: false
+      volumes:
+      - name: secrets
+        secret:
+          secretName: ticketingworker-appsettings
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler

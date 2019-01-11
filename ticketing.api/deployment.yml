@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: ticketingapi
-        image: denhamparry/ticketing.api:0.2.107-beta
+        image: denhamparry/ticketing.api
         env:
         - name: ValueFromKubernetesEnvVariable
           valueFrom:
@@ -30,6 +30,31 @@ spec:
             configMapKeyRef:
               name: ticketingapi-configmap
               key: ValueOverride
+        - name: MessagingQueue
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingapi-configmap
+              key: MessagingQueue
+        - name: MessagingUsername
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingapi-configmap
+              key: MessagingUsername
+        - name: MessagingPassword
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingapi-configmap
+              key: MessagingPassword
+        - name: ConnectionStrings__Messaging
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingapi-configmap
+              key: Messaging
+        - name: ConnectionStrings__TicketingDb
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingapi-configmap
+              key: TicketingDb
         - name: ValueFromKubernetesSecret
           valueFrom:
             secretKeyRef:
