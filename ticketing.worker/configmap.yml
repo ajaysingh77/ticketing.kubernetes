@@ -9,4 +9,6 @@ data:
   MessagingUsername: "user"
   MessagingPassword: "hdTPkyClUB"
   Messaging: "quiet-narwhal-rabbitmq.default.svc.cluster.local"
+  WorkerName: "K8S_WORKER"
+  SignalR: "http://ticketingweb/workers"
 ---
