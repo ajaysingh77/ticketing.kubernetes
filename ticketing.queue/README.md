@@ -1,19 +1,5 @@
 # Ticketing.Queue
 
-## Setup
-
 ```bash
-$ helm install --name ticketing.queue stable/rabbitmq
-...
+kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/default/pods/*/tickets" | jq .
 ```
-
-## Delete
-
-```bash
-$ helm delete --name ticketing.queue
-...
-```
-
-## References
-
-* [RabbitMQ Helm Chart](https://github.com/helm/charts/tree/master/stable/rabbitmq)
