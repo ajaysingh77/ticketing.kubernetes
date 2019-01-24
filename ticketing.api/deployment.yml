@@ -15,8 +15,6 @@ spec:
       name: ticketingapi
       labels:
         app: ticketingapi
-      annotations:
-        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: ticketingapi
