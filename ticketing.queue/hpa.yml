@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: ticketingapi
+  name: ticketingworker
 spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: ticketingapi
+    name: ticketingworker
   minReplicas: 1
-  maxReplicas: 1
+  maxReplicas: 20
   metrics:
   - type: Pods
     pods:
