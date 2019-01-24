@@ -1,0 +1,17 @@
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ticketingapi
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: ticketingapi
+  minReplicas: 1
+  maxReplicas: 1
+  metrics:
+  - type: Pods
+    pods:
+      metricName: tickets
+      targetAverageValue: 10

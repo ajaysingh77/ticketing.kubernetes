@@ -1,1 +1,5 @@
 providers/aks/nodes/scale.sh
+ticketing.web/configmap.yml
+ticketing.queue/prometheus
+ticketing.queue/monitoring
+ticketing.queue/custom-metrics-api

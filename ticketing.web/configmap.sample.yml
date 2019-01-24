@@ -1,0 +1,10 @@
+Add your connection string
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ticketingweb-configmap
+  namespace: default
+data:
+  Azure__SignalR__ConnectionString: ""
+---
