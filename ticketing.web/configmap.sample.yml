@@ -6,5 +6,5 @@ metadata:
   name: ticketingweb-configmap
   namespace: default
 data:
-  Azure__SignalR__ConnectionString: ""
+  AzureSignalRConnectionString: ""
 ---
