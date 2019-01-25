@@ -19,6 +19,12 @@ spec:
       containers:
       - name: ticketingweb
         image: denhamparry/ticketing.web
+        env:
+        - name: AppConfiguration__AzureSignalRConnectionString
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingweb-configmap
+              key: AzureSignalRConnectionString
         resources: {}
         terminationMessagePath: "/dev/termination-log"
         terminationMessagePolicy: File
