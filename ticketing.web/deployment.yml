@@ -6,7 +6,7 @@ metadata:
   labels:
     app: ticketingweb
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
         app: ticketingweb
@@ -25,6 +25,11 @@ spec:
             configMapKeyRef:
               name: ticketingweb-configmap
               key: AzureSignalRConnectionString
+        - name: AppConfiguration__TicketingAPI
+          valueFrom:
+            configMapKeyRef:
+              name: ticketingweb-configmap
+              key: TicketingAPI
         resources: {}
         terminationMessagePath: "/dev/termination-log"
         terminationMessagePolicy: File
