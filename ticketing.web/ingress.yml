@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - ticketing-api.eastus.cloudapp.azure.com
+    - www.developmentsquad.com
     secretName: tls-secret-prod
   rules:
-  - host: ticketing-api.eastus.cloudapp.azure.com
+  - host: www.developmentsquad.com
     http:
       paths:
       - path: /
