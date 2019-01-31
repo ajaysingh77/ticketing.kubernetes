@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: ticketingworker
-        image: denhamparry/ticketing.worker:latest
+        image: denhamparry/ticketing.worker:boo
         env:
         - name: "ASPNETCORE_ENVIRONMENT"
           value: "kubernetes"

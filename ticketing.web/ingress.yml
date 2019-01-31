@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - www.developmentsquad.com
+    - developmentsquad.com
     secretName: tls-secret-prod
   rules:
-  - host: www.developmentsquad.com
+  - host: developmentsquad.com
     http:
       paths:
       - path: /
