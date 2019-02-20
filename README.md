@@ -1,5 +1,14 @@
 # Ticketing.Kubernetes
 
+## TL;DR
+
+Blog post is currently being written, access to code base for microservices can be found:
+
+* [Ticketing.Web](https://github.com/denhamparry/ticketing.web)
+* [Ticketing.API](https://github.com/denhamparry/ticketing.api)
+* [Ticketing.Worker](https://github.com/denhamparry/ticketing.worker)
+* [Ticketing.Data](https://github.com/denhamparry/ticketing.data)
+
 ## Setup
 
 * Setup 'cert-manager'
